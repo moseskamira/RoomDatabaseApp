@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RoomDatabase App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_user">ADD USER</string>
+    <string name="view_user">VIEW USER</string>
+    <string name="delete_user">DELETE USER</string>
+    <string name="update_user">UPDATE USER</string>
+    <string name="enter_user_id">Enter User Id</string>
+    <string name="add_user_here">ADD USER HERE</string>
+    <string name="enter_user_name">Enter User Name</string>
+    <string name="enter_user_email_address">enter User Email Address</string>
+    <string name="save">SAVE</string>
+</resources>

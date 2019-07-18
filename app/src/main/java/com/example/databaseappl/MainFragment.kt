@@ -35,7 +35,7 @@ class MainFragment : Fragment(), View.OnClickListener{
         if (view != null) {
             when (view.id) {
                 R.id.add_user -> fragmentManager!!.beginTransaction().replace(R.id.fragment_container,
-                    AddUser()).commit()
+                    AddUser()).addToBackStack(null).commit()
             }
 
         }

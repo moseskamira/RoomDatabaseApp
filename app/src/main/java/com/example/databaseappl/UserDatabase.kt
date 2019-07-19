@@ -17,15 +17,15 @@ abstract class UserDatabase : RoomDatabase() {
                 synchronized(UserDatabase::class) {
                     if(databaseInstance == null) {
                         databaseInstance = Room.databaseBuilder(context.applicationContext,
-                            UserDatabase::class.java, "userDatabase")
+                            UserDatabase::class.java, "TwoDatabase")
                             .allowMainThreadQueries().build()
                     }
                 }
             }
             return databaseInstance
         }
-//        fun destroyDatabase() {
-//            databaseInstance = null
-//        }
+        fun destroyDatabase() {
+            databaseInstance = null
+        }
     }
 }

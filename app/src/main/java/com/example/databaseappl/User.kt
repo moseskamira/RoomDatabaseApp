@@ -2,9 +2,10 @@ package com.example.databaseappl
 
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
+import android.arch.persistence.room.Index
 import android.arch.persistence.room.PrimaryKey
 
-@Entity(tableName = "usersTable")
+@Entity(tableName = "usersTable", indices = [Index(value = ["userId", "Name", "Email"], unique = true)])
 class User {
 
     @PrimaryKey
@@ -15,12 +16,6 @@ class User {
 
     @ColumnInfo(name = "Email")
     var userEmail: String? = null
-
-// constructor(userId: Int, userName: String, userEmail: String) {
-//     this.userId = userId
-//     this.userName = userName
-//     this.userEmail = userEmail
-// }
 
 
 }

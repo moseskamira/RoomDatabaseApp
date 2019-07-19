@@ -9,8 +9,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class AddUser : Fragment(), View.OnClickListener {
     lateinit var userId: EditText
@@ -34,6 +32,8 @@ class AddUser : Fragment(), View.OnClickListener {
         if (view != null) {
             userDatabase = UserDatabase.getDatabaseInstance(context!!.applicationContext)
             populateDbWithData(userDatabase!!)
+
+            killDatabase()
         }
     }
     private fun addUser(db: UserDatabase, user: User): User {
@@ -54,4 +54,10 @@ class AddUser : Fragment(), View.OnClickListener {
 
         Toast.makeText(activity, "User Added Successfully", Toast.LENGTH_SHORT).show()
     }
+    private fun killDatabase () {
+        UserDatabase.destroyDatabase()
+
+
+    }
+
 }

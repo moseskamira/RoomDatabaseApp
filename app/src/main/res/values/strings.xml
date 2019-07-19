@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RoomDatabase App</string>
+    <string name="app_name">Android RoomDb App</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_user">ADD USER</string>
     <string name="view_user">VIEW USER</string>
@@ -10,4 +10,8 @@
     <string name="enter_user_name">Enter User Name</string>
     <string name="enter_user_email_address">enter User Email Address</string>
     <string name="save">SAVE</string>
+    <string name="user_information">User Information</string>
+    <string name="user_id">User Id</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
 </resources>

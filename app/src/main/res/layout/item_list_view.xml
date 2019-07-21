@@ -3,51 +3,86 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/item_view_list"
         tools:context=".AddUser">
 
-    <TextView
-            android:id="@+id/user_id_display"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/user_id"/>
+    <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
 
-    <TextView
-            android:id="@+id/user_name_display"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/user_id_display"
-            android:hint="@string/user_name"/>
+        <TextView
+                android:id="@+id/user_id_displayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:text="@string/user_id_displayText"/>
+        <TextView
+                android:id="@+id/user_id_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/id_test"
+                android:layout_toEndOf="@+id/user_id_displayText"
+                android:layout_toRightOf="@+id/user_id_displayText"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_alignTop="@+id/user_id_displayText"
+                android:layout_marginLeft="32dp"/>
 
-    <TextView
-            android:id="@+id/user_email_display"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/user_name_display"
-            android:hint="@string/email"/>
+
+        <TextView
+                android:id="@+id/user_name_displayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:text="@string/name"
+                android:layout_alignTop="@id/user_id_displayText"
+                android:layout_marginTop="48dp"/>
+        <TextView
+                android:id="@+id/user_name_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="18sp"
+                android:hint="@string/name_test"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/user_id_display"
+                android:layout_alignLeft="@+id/user_id_display"
+                android:layout_alignStart="@+id/user_id_display"/>
+
+
+        <TextView
+                android:id="@+id/user_email_displayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="18sp"
+
+                android:text="@string/email_display"
+                android:layout_alignBottom="@id/user_name_displayText"
+                android:layout_marginBottom="-47dp"/>
+        <TextView
+                android:id="@+id/user_email_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="22dp"
+                android:textSize="18sp"
+                android:hint="@string/email_test"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_below="@+id/user_name_display"
+                android:layout_alignLeft="@+id/user_name_display"
+                android:layout_alignStart="@+id/user_name_display"/>
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

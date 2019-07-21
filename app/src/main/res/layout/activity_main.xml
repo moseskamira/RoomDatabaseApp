@@ -8,7 +8,4 @@
         android:id="@+id/fragment_container"
         tools:context=".MainActivity">
 
-    <!--<include layout="@layout/fragment_home"/>-->
-    <!--<include layout="@layout/recycler_view"/>-->
-
 </android.support.constraint.ConstraintLayout>

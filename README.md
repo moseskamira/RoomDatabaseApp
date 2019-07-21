@@ -26,10 +26,11 @@ Follow the Instructions below to have the Application running on your machine.
 - AVD or Physical device
 
 ### Installation
-Clone the repo on the link: https://github.com/moseskamira/RoomDatabaseApp.git
-Import the project into android studio
-Create an android virtual device (AVD) and have it started
-Run the project
+- Clone the repo on the link: https://github.com/moseskamira/RoomDatabaseApp.git
+- Import the project into android studio
+- Create an android virtual device (AVD) and have it started
+- Run the project
+
 
 ## Screenshots
 ### Adding User To Database Table
@@ -38,10 +39,12 @@ Run the project
 ### Viewing All Users In The Database Table
 ![Users List](images/ViewAllUsers.gif)
 
+### Delete User From Table
+![Delete User](images/deleteUser.gif)
+
 ## Future Improvements
 - Catch App crashing when empty fields are submitted and when duplicate userId is added
 - Implement the use of Live Data
-- implement the Delete functionality
 - Implement the Update functionality
 
 

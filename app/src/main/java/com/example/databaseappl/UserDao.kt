@@ -1,9 +1,6 @@
 package com.example.databaseappl
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.OnConflictStrategy
-import android.arch.persistence.room.Query
+import android.arch.persistence.room.*
 
 @Dao
 interface UserDao {
@@ -12,4 +9,7 @@ interface UserDao {
 
     @Query("SELECT * FROM usersTable")
     fun fetUsers(): List<User>
+
+    @Delete
+    fun deleteUser(user: User): Int
 }

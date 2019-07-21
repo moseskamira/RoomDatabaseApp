@@ -11,12 +11,16 @@ import android.widget.Button
 class MainFragment : Fragment(), View.OnClickListener{
     lateinit var addUserBtn: Button
     lateinit var viewButton: Button
+    lateinit var deleteUserButton: Button
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view: View = inflater.inflate(R.layout.fragment_main, container, false)
         addUserBtn = view.findViewById(R.id.add_user)
         addUserBtn.setOnClickListener(this)
         viewButton = view.findViewById(R.id.view_user)
         viewButton.setOnClickListener(this)
+        deleteUserButton = view.findViewById(R.id.delete_user)
+        deleteUserButton.setOnClickListener(this)
+
         return view
     }
 
@@ -27,6 +31,8 @@ class MainFragment : Fragment(), View.OnClickListener{
                     AddUser()).addToBackStack(null).commit()
                 R.id.view_user -> fragmentManager!!.beginTransaction().replace(R.id.fragment_container,
                     FetchUsers()).addToBackStack(null).commit()
+                R.id.delete_user -> fragmentManager!!.beginTransaction().replace(R.id.fragment_container,
+                    DeleteUser()).addToBackStack(null).commit()
             }
         }
     }

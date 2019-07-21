@@ -12,14 +12,11 @@ class FetchUsers : Fragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var userAdapter: UserAdapter
     lateinit var layoutManager: LinearLayoutManager
-//    var allUsers: List<User> = ArrayList()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_fetch_users, container, false)
         recyclerView = view.findViewById(R.id.recycler_view)
-//        allUsers = retrieveAllusers()
-        userAdapter = UserAdapter(context!!.applicationContext, retrieveAllusers())
+        userAdapter = UserAdapter(context!!.applicationContext, retrieveAllUsers())
         layoutManager = LinearLayoutManager(context!!.applicationContext)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = userAdapter
@@ -27,8 +24,7 @@ class FetchUsers : Fragment() {
         return view
     }
 
-    private fun retrieveAllusers(): List<User> {
-        //        Log.d("Users",user.toString())
+    private fun retrieveAllUsers(): List<User> {
         return UserDatabase.getDatabaseInstance(context!!.applicationContext)!!.userDao().fetUsers()
     }
 }

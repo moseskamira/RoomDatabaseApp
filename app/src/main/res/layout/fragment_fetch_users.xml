@@ -8,12 +8,4 @@
 
     <include layout="@layout/recycler_view"/>
 
-    <!--<TextView-->
-            <!--android:id="@+id/user_Info"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:text="@string/user_information"/>-->
-
-
-
 </android.support.constraint.ConstraintLayout>

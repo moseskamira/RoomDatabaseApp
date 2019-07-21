@@ -2,15 +2,16 @@ package com.example.databaseappl
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-class UserAdapter(val context: Context, val allUsers: List<User>) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+class UserAdapter(val context: Context, val allUsers: List<User>) : RecyclerView.Adapter<UserAdapter.UserViewHolder>()
+{
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_view, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_view,
+            parent, false)
         return UserViewHolder(view)
     }
 
@@ -22,7 +23,6 @@ class UserAdapter(val context: Context, val allUsers: List<User>) : RecyclerView
         holder.userId.text = allUsers[position].userId.toString()
         holder.userName.text = allUsers[position].userName
         holder.userEmail.text = allUsers[position].userEmail
-//        Log.d("Users", "I have reach here")
     }
 
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

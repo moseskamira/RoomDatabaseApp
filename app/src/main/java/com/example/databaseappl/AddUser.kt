@@ -23,7 +23,6 @@ class AddUser : Fragment(), View.OnClickListener {
         userName = view.findViewById(R.id.user_name)
         userEmail = view.findViewById(R.id.user_email)
         saveBtn = view.findViewById(R.id.save_user)
-
         saveBtn.setOnClickListener(this)
         return view
     }
@@ -32,7 +31,6 @@ class AddUser : Fragment(), View.OnClickListener {
         if (view != null) {
             userDatabase = UserDatabase.getDatabaseInstance(context!!.applicationContext)
             populateDbWithData(userDatabase!!)
-
             killDatabase()
         }
     }
@@ -51,13 +49,9 @@ class AddUser : Fragment(), View.OnClickListener {
         user.userName = userName
         user.userEmail = userEmail
         addUser(db, user)
-
         Toast.makeText(activity, "User Added Successfully", Toast.LENGTH_SHORT).show()
     }
     private fun killDatabase () {
         UserDatabase.destroyDatabase()
-
-
     }
-
 }

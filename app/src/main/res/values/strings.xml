@@ -14,4 +14,12 @@
     <string name="user_id">User Id</string>
     <string name="user_name">User Name</string>
     <string name="email">Email</string>
+    <string name="user_id_displayText">User ID:</string>
+    <string name="user_name_displayText">User Name:</string>
+    <string name="user_email_displayText">User Email:</string>
+    <string name="name">Name:</string>
+    <string name="email_display">Email:</string>
+    <string name="id_test">ID</string>
+    <string name="name_test">Name</string>
+    <string name="email_test">Email</string>
 </resources>

@@ -22,4 +22,7 @@
     <string name="id_test">ID</string>
     <string name="name_test">Name</string>
     <string name="email_test">Email</string>
+    <string name="enter_userid_to_delete">Enter userID To delete</string>
+    <string name="delete_user_from_here">DELETE USER FROM HERE</string>
+    <string name="delete">DELETE</string>
 </resources>
